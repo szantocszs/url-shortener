@@ -1,1 +1,1 @@
-az group create --name rgname --location westeurope
+az group create --name laba-urlshortener-dev --location westeurope

@@ -1,1 +1,0 @@
-az deployment group what-if --resource-group rgname --template-file main.bicep

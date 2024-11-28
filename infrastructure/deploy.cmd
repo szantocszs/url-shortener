@@ -1,1 +1,1 @@
-az deployment what-if --resource-group laba-url-shortener-dev --template-file main.bicep
+az deployment group create --resource-group laba-urlshortener-dev --template-file main.bicep
