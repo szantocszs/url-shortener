@@ -75,3 +75,9 @@ https://learn.microsoft.com/en-gb/entra/workload-id/workload-identity-federation
 az webapp deployment list-publishing-profiles --name api-kjlcpthy3q5jk --resource-group laba-urlshortener-dev
 az webapp deployment list-publishing-profiles --name api-kjlcpthy3q5jk --resource-group laba-urlshortener-dev --xml
 ```
+
+
+### Apply to Custom Contributor Role
+``` bash
+az ad sp create-for-rbac --name "GitHub-Actions-SP" --role infra_deploy --scopes /subscriptions/28292e71-d9a7-48a7-81a2-526c30098a2a --sdk-auth
+```
