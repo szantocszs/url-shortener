@@ -68,3 +68,56 @@ az account set --subscription 10470b33-dc43-4179-add5-c77972fa476c
 #### Configure a federated identity credential on an app
 
 https://learn.microsoft.com/en-gb/entra/workload-id/workload-identity-federation-create-trust?pivots=identity-wif-apps-methods-azp#configure-a-federated-identity-credential-on-an-app
+
+## Get Azure Publish Profile
+
+``` bash
+az webapp deployment list-publishing-profiles --name api-kjlcpthy3q5jk --resource-group laba-urlshortener-dev --xml
+```
+
+[
+  {
+    "SQLServerDBConnectionString": "",
+    "controlPanelLink": "https://portal.azure.com",
+    "databases": null,
+    "destinationAppUrl": "https://api-kjlcpthy3q5jk.azurewebsites.net",
+    "hostingProviderForumLink": "",
+    "msdeploySite": "api-kjlcpthy3q5jk",
+    "mySQLDBConnectionString": "",
+    "profileName": "api-kjlcpthy3q5jk - Web Deploy",
+    "publishMethod": "MSDeploy",
+    "publishUrl": "api-kjlcpthy3q5jk.scm.azurewebsites.net:443",
+    "userName": "$api-kjlcpthy3q5jk",
+    "userPWD": "bSpQTvajgwc51ua3ac09aCtj1l4vPfoohmorcovwCTFou0RqS5Kux542NcPW",
+    "webSystem": "WebSites"
+  },
+  {
+    "SQLServerDBConnectionString": "",
+    "controlPanelLink": "https://portal.azure.com",
+    "databases": null,
+    "destinationAppUrl": "https://api-kjlcpthy3q5jk.azurewebsites.net",
+    "ftpPassiveMode": "True",
+    "hostingProviderForumLink": "",
+    "mySQLDBConnectionString": "",
+    "profileName": "api-kjlcpthy3q5jk - FTP",
+    "publishMethod": "FTP",
+    "publishUrl": "ftps://waws-prod-am2-809.ftp.azurewebsites.windows.net/site/wwwroot",
+    "userName": "api-kjlcpthy3q5jk\\$api-kjlcpthy3q5jk",
+    "userPWD": "bSpQTvajgwc51ua3ac09aCtj1l4vPfoohmorcovwCTFou0RqS5Kux542NcPW",
+    "webSystem": "WebSites"
+  },
+  {
+    "SQLServerDBConnectionString": "",
+    "controlPanelLink": "https://portal.azure.com",
+    "databases": null,
+    "destinationAppUrl": "https://api-kjlcpthy3q5jk.azurewebsites.net",
+    "hostingProviderForumLink": "",
+    "mySQLDBConnectionString": "",
+    "profileName": "api-kjlcpthy3q5jk - Zip Deploy",
+    "publishMethod": "ZipDeploy",
+    "publishUrl": "api-kjlcpthy3q5jk.scm.azurewebsites.net:443",
+    "userName": "$api-kjlcpthy3q5jk",
+    "userPWD": "bSpQTvajgwc51ua3ac09aCtj1l4vPfoohmorcovwCTFou0RqS5Kux542NcPW",
+    "webSystem": "WebSites"
+  }
+]
