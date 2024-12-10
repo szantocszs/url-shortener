@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Api", "UrlShortener.Api\UrlShortener.Api.csproj", "{FA4C4957-AA27-4E53-A17F-1F6377D12D49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Api", "Api\src\UrlShortener.Api\UrlShortener.Api.csproj", "{FA4C4957-AA27-4E53-A17F-1F6377D12D49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{E663B466-4DC3-45EF-88B1-B0562165F226}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0ACF4F69-198D-4F8A-87E1-F9825C29C8DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{764C7034-3078-4A48-AC17-FD534D14CAE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +24,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0ACF4F69-198D-4F8A-87E1-F9825C29C8DA} = {E663B466-4DC3-45EF-88B1-B0562165F226}
+		{FA4C4957-AA27-4E53-A17F-1F6377D12D49} = {0ACF4F69-198D-4F8A-87E1-F9825C29C8DA}
+		{764C7034-3078-4A48-AC17-FD534D14CAE9} = {E663B466-4DC3-45EF-88B1-B0562165F226}
 	EndGlobalSection
 EndGlobal
