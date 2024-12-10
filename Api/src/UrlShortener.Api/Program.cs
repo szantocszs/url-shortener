@@ -1,53 +1,56 @@
 using Azure.Identity;
+using UrlShortener.Api.Extensions;
+using UrlShortener.Core.Urls.Add;
+using UrlShortener.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var keyVaultName = builder.Configuration["KeyVaultName"];
-
-if (!string.IsNullOrWhiteSpace(keyVaultName))
+if (!string.IsNullOrEmpty(keyVaultName))
 {
     builder.Configuration.AddAzureKeyVault(
-        new Uri($"https://{keyVaultName}.vault.azure.net"),
+        new Uri($"https://{keyVaultName}.vault.azure.net/"),
         new DefaultAzureCredential());
 }
 
 // Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton(TimeProvider.System);
+builder.Services
+    .AddUrlFeature()
+    .AddCosmosUrlDataStore(builder.Configuration);
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
+app.MapPost("/api/urls",
+    async (AddUrlHandler handler,
+        AddUrlRequest request,
+        CancellationToken cancellationToken) =>
+    {
+        var requestWithUser = request with
+        {
+            CreatedBy = "gui@guiferreira.me"
+        };
+        var result = await handler.HandleAsync(requestWithUser, cancellationToken);
 
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+        if (!result.Succeeded)
+        {
+            return Results.BadRequest(result.Error);
+        }
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+        return Results.Created($"/api/urls/{result.Value!.ShortUrl}",
+            result.Value);
+    });
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
