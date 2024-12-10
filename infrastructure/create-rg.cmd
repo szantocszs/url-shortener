@@ -1,1 +1,0 @@
-az group create --name laba-urlshortener-dev --location westeurope
