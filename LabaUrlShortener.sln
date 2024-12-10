@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Api", "Api\src\UrlShortener.Api\UrlShortener.Api.csproj", "{FA4C4957-AA27-4E53-A17F-1F6377D12D49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{E663B466-4DC3-45EF-88B1-B0562165F226}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0ACF4F69-198D-4F8A-87E1-F9825C29C8DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{764C7034-3078-4A48-AC17-FD534D14CAE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Api.Core.Tests", "Api\test\UrlShortener.Api.Core.Tests\UrlShortener.Api.Core.Tests.csproj", "{1BE64734-6CFD-43D1-B13C-922F6CD26EE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Tests", "Api\test\UrlShortener.Tests\UrlShortener.Tests.csproj", "{C0BB4530-4EE2-4EC5-9629-31EAB6A43CC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Core", "Api\src\UrlShortener.Core\UrlShortener.Core.csproj", "{0045C2E9-06B6-4F56-AB89-CA2A63BB2E3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Infrastructure", "Api\src\UrlShortener.Infrastructure\UrlShortener.Infrastructure.csproj", "{DEA0C220-B92D-43DB-B035-FBB09F193F25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA4C4957-AA27-4E53-A17F-1F6377D12D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA4C4957-AA27-4E53-A17F-1F6377D12D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA4C4957-AA27-4E53-A17F-1F6377D12D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA4C4957-AA27-4E53-A17F-1F6377D12D49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BE64734-6CFD-43D1-B13C-922F6CD26EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE64734-6CFD-43D1-B13C-922F6CD26EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE64734-6CFD-43D1-B13C-922F6CD26EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE64734-6CFD-43D1-B13C-922F6CD26EE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0BB4530-4EE2-4EC5-9629-31EAB6A43CC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0BB4530-4EE2-4EC5-9629-31EAB6A43CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0BB4530-4EE2-4EC5-9629-31EAB6A43CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0BB4530-4EE2-4EC5-9629-31EAB6A43CC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0045C2E9-06B6-4F56-AB89-CA2A63BB2E3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0045C2E9-06B6-4F56-AB89-CA2A63BB2E3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0045C2E9-06B6-4F56-AB89-CA2A63BB2E3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0045C2E9-06B6-4F56-AB89-CA2A63BB2E3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEA0C220-B92D-43DB-B035-FBB09F193F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEA0C220-B92D-43DB-B035-FBB09F193F25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEA0C220-B92D-43DB-B035-FBB09F193F25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEA0C220-B92D-43DB-B035-FBB09F193F25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FA4C4957-AA27-4E53-A17F-1F6377D12D49} = {0ACF4F69-198D-4F8A-87E1-F9825C29C8DA}
+		{0ACF4F69-198D-4F8A-87E1-F9825C29C8DA} = {E663B466-4DC3-45EF-88B1-B0562165F226}
+		{764C7034-3078-4A48-AC17-FD534D14CAE9} = {E663B466-4DC3-45EF-88B1-B0562165F226}
+		{1BE64734-6CFD-43D1-B13C-922F6CD26EE3} = {764C7034-3078-4A48-AC17-FD534D14CAE9}
+		{C0BB4530-4EE2-4EC5-9629-31EAB6A43CC8} = {764C7034-3078-4A48-AC17-FD534D14CAE9}
+		{0045C2E9-06B6-4F56-AB89-CA2A63BB2E3F} = {0ACF4F69-198D-4F8A-87E1-F9825C29C8DA}
+		{DEA0C220-B92D-43DB-B035-FBB09F193F25} = {0ACF4F69-198D-4F8A-87E1-F9825C29C8DA}
+	EndGlobalSection
+EndGlobal
