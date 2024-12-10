@@ -1,0 +1,1 @@
+az deployment group create --resource-group laba-urlshortener-dev --template-file main.bicep
