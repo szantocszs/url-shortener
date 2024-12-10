@@ -95,8 +95,8 @@ jobs:
             az group create --name ${{ vars.RESOURCE_GROUP_NAME }} --location ${{ vars.RESOURCE_GROUP_LOCATION }}
             echo "Azure resource group created"
   
-      - name: Deploy  
+      - name: Deploy
         uses: azure/arm-deploy@v2
         with:
           resourceGroupName: ${{ vars.RESOURCE_GROUP_NAME }}
-          template: ./infrastructure/main.bicep        
+          template: ./infrastructure/main.bicep
