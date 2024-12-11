@@ -1,6 +1,7 @@
 param location string = resourceGroup().location
 param appServicePlanName string
 param appName string
+param skuName string = 'F1'
 param keyVaultName string
 param appSettings array = []
 
@@ -12,7 +13,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2023-12-01' = {
     reserved: true
   }
   sku: {
-    name: 'F1'
+    name: skuName
   }
 }
 
