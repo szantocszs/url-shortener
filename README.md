@@ -72,8 +72,17 @@ https://learn.microsoft.com/en-gb/entra/workload-id/workload-identity-federation
 ## Get Azure Publish Profile
 
 ``` bash
-az webapp deployment list-publishing-profiles --name api-kjlcpthy3q5jk --resource-group laba-urlshortener-dev
+dev
 az webapp deployment list-publishing-profiles --name api-kjlcpthy3q5jk --resource-group laba-urlshortener-dev --xml
+az webapp deployment list-publishing-profiles --name token-range-service-kjlcpthy3q5jk --resource-group laba-urlshortener-dev --xml
+
+stg
+az webapp deployment list-publishing-profiles --name api-imwkpvocw37vq --resource-group laba-urlshortener-stg --xml
+az webapp deployment list-publishing-profiles --name token-range-service-imwkpvocw37vq --resource-group laba-urlshortener-stg --xml
+
+prod
+
+
 ```
 
 
