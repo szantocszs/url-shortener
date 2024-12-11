@@ -81,6 +81,8 @@ az webapp deployment list-publishing-profiles --name api-imwkpvocw37vq --resourc
 az webapp deployment list-publishing-profiles --name token-range-service-imwkpvocw37vq --resource-group laba-urlshortener-stg --xml
 
 prod
+az webapp deployment list-publishing-profiles --name api-tzdbhft7fglve --resource-group laba-urlshortener-prd --xml
+
 
 
 ```
