@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0ACF4F69-198
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{764C7034-3078-4A48-AC17-FD534D14CAE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Api.Core.Tests", "Api\test\UrlShortener.Api.Core.Tests\UrlShortener.Api.Core.Tests.csproj", "{1BE64734-6CFD-43D1-B13C-922F6CD26EE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Api.Core.Tests", "Api\tests\UrlShortener.Api.Core.Tests\UrlShortener.Api.Core.Tests.csproj", "{1BE64734-6CFD-43D1-B13C-922F6CD26EE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Tests", "Api\test\UrlShortener.Tests\UrlShortener.Tests.csproj", "{C0BB4530-4EE2-4EC5-9629-31EAB6A43CC8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Tests", "Api\tests\UrlShortener.Tests\UrlShortener.Tests.csproj", "{C0BB4530-4EE2-4EC5-9629-31EAB6A43CC8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Core", "Api\src\UrlShortener.Core\UrlShortener.Core.csproj", "{0045C2E9-06B6-4F56-AB89-CA2A63BB2E3F}"
 EndProject
