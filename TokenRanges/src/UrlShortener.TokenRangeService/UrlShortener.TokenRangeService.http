@@ -1,4 +1,4 @@
-POST https://token-range-service-kjlcpthy3q5jk.azurewebsites.net/assign
+POST https://token-range-service-piza2nvlxc5jg.azurewebsites.net/assign
 Accept: application/json
 Content-Type: application/json
 
