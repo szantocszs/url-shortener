@@ -28,7 +28,11 @@ module apiService 'modules/compute/appservice.bicep' = {
         name: 'ContainerName'
         value: 'items'
       }
-    ]    
+      {
+        name: 'TokenRangeService__Endpoint'
+        value: tokenRangeService.outputs.url
+      }
+    ]
   }
   dependsOn: [
     keyVault
@@ -81,11 +85,12 @@ module keyVaultRoleAssignment 'modules/secrets/key-vault-role-assignment.bicep' 
     keyVaultName: keyVault.outputs.name
     principalIds: [
       apiService.outputs.principalId
-      // Add more principal IDs as needed
+      tokenRangeService.outputs.principalId
     ]
   }
   dependsOn: [
     keyVault
     apiService
+    tokenRangeService
   ]
 }
